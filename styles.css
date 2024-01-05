@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Hago una seudoclase root para definir las varibles */
+:root {
+    --Col-black: #000000;
+    --col-gray: #696969;
+    --col-white: #FFFFFF;
+
+    --type-normal: #FFFFF0;
+    --type-fire: #FF7200;
+    --type-water: #2481F0;
+    --type-grass: #3DA224;
+    --type-electric: #FCDF7F;
+    --type-ice: #3DD9FF;
+    --type-fighting: #FF8100;
+    --type-poison: #923FCC;
+    --type-ground: #92501B;
+    --type-flying: #82BAF0;
+    --type-psychic: #F69EBC;
+    --type-bug: #92A212;
+    --type-rock: #B0AB82;
+    --type-ghost: #B79EB7;
+    --type-dark: #4F3F3D;
+    --type-dragon: #4F60E2;
+    --type-steel: #60A2B9;
+    --type-fairy: #F6B7F7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    color: var(--Col-black)
+}
+
+/* Hago un reset de la UL y Button para quitar lo que trae predefinido */
+ul {
+    list-style-type: none;
+}
+
+button {
+    border: 0;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #8B0000;
+    
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+    box-shadow: 0 0 70px 0px;
+    background-color: #B22222;
+}
+
+/* con margin 0 auto centro todo el contenedor nav */
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-end;
+    padding-inline: 5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.nav-lista {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.btn-header {
+    background-color: var(--col-gray);
+    padding: .5rem;
+    border-radius: 100vmax;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 5px 0 10px 0;
+    transition: 2s;
+    color: var(--col-white);
+}
+
+/* creo un boton header hover para agrandar el boton seleccionado */
+.btn-header:hover {
+    transform: scale(2.1)
+}
+
+/* con margin 0 auto centro todo el contenedor main */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* usamos grid como alternativa a flex en este caso para pobrar pero no es la mejor alternativa */
+/* lo pongos con FR para tomar una fraccion del espacio disponible en columnas o tablas. es un experimento */
+.pokemon-cards {
+    display: grid;
+    gap: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+    .pokemon-cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.pokemon {
+    border-radius: 2rem;
+    background-color: 		#5F9EA0;
+    box-shadow: 7px 7px 3rem -1rem;
+    padding-block: 1rem;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.pokemon-numero {
+    position: absolute;
+    top: 1rem;
+    left: 80%;
+    font-size: 2rem;
+    transform: translateX(-50%);
+    font-weight: 50;
+    z-index: -1;
+    color: 	#F2F2F2;
+}
+
+.pokemon-imagen {
+    display: flex;
+    justify-content: center;
+    padding-inline: 1rem;
+}
+
+.pokemon-imagen img {
+    width: 100%;
+    max-width: 6rem;
+}
+
+.pokemon-datos {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: center;
+    padding-inline: 1rem;
+    text-align: center;
+}
+
+/* en el nombre pongo un flex wrap para que a la hora de ampliar o diminuir mi pagina no se solapen y se coloquen una encima de la otra */
+.nombre-contenedor{
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pokemon-parrafo {
+    background-color: var(--type-ghost);
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+    font-size: .75rem;
+    font-weight: 500;
+}
+
+.pokemon-nombre {
+    font-size: 1.4rem;
+}
+
+.pokemon-tabla {
+    display: flex;
+    gap: .5rem;
+    font-size: .75rem;
+    font-weight: 500;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tipo {
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+}
+
+.pokemon-stats {
+    display: flex;
+    gap: 1rem;
+    font-size: .85rem;
+}
+
+.stat {
+    background-color: var(--type-ghost);
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+}
+
+.nav img {
+    width: 100%;
+}
+
+header form {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.formulario {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--Col-black);
+    padding: 10px 12px;
+    border-radius: 25px;
+}
+
+.formulario input {
+    width: 190px;
+    border: none;
+    font-size: 17px;
+}
+
+.icono {
+    width: 30px;
+    height: 30px;
+}
+
+.btn-search {
+    border-radius: 25px;
+    padding: 15px 10px;
+    background-color: var(--Col-black);
+    color: var(--col-white);
+}
+
+.normal {
+    color: var(--Col-black);
+    background-color: var(--type-normal);
+}
+
+
+.fire {
+    color: var(--col-white);
+    background-color: var(--type-fire);
+}
+
+.water {
+    color: var(--Col-black);
+    background-color: var(--type-water);
+}
+
+.grass {
+    color: var(--Col-black);
+    background-color: var(--type-grass);
+}
+
+.electric {
+    color: var(--Col-black);
+    background-color: var(--type-electric);
+}
+
+.ice {
+    color: var(--Col-black);
+    background-color: var(--type-ice);
+}
+
+.fighting {
+    color: var(--Col-black);
+    background-color: var(--type-fighting);
+}
+
+.poison {
+    color: var(--Col-black);
+    background-color: var(--type-poison);
+}
+
+.ground {
+    color: var(--col-white);
+    background-color: var(--type-ground);
+}
+
+.flying {
+    color: var(--Col-black);
+    background-color: var(--type-flying);
+}
+
+.psychic {
+    color: var(--Col-black);
+    background-color: var(--type-psychic);
+}
+
+.bug {
+    color: var(--col-white);
+    background-color: var(--type-bug);
+}
+
+.rock {
+    color: var(--Col-black);
+    background-color: var(--type-rock);
+}
+
+.ghost {
+    color: var(--col-white);
+    background-color: var(--type-ghost);
+}
+
+.dark {
+    color: var(--col-white);
+    background-color: var(--type-dark);
+}
+
+.dragon {
+    color: var(--col-white);
+    background-color: var(--type-dragon);
+}
+
+.steel {
+    color: var(--col-white);
+    background-color: var(--type-steel);
+}
+
+.fairy {
+    color: var(--Col-black);
+    background-color: var(--type-fairy);
+}

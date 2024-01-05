@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./pokedex.js" defer></script>
+    <title>POKÉDEX</title>
+</head>
+
+<body>
+    <!--PRIMERO HAGO EL LISTADO DE LAS ITEMS CON SU CLASE BTN-HEADER-->
+    <header>
+        <nav class="nav">
+            <img src="img/logo.png" alt="logo">
+            <ul class="nav-lista">
+                <li class="nav-item"><button class="btn btn-header" id="ver todos">VER TODOS</button></li>
+                <li class="nav-item"><button class="btn btn-header normal" id="normal">NORMAL</button></li>
+                <li class="nav-item"><button class="btn btn-header fire" id="fire">FIRE</button></li>
+                <li class="nav-item"><button class="btn btn-header water" id="water">WATER</button></li>
+                <li class="nav-item"><button class="btn btn-header grass" id="grass">GRASS</button></li>
+                <li class="nav-item"><button class="btn btn-header electric" id="electric">ELECTRIC</button></li>
+                <li class="nav-item"><button class="btn btn-header ice" id="ice">ICE</button></li>
+                <li class="nav-item"><button class="btn btn-header fighting" id="fighting">FIGHTING</button></li>
+                <li class="nav-item"><button class="btn btn-header poison" id="poison">POISON</button></li>
+                <li class="nav-item"><button class="btn btn-header ground" id="ground">GROUND</button></li>
+                <li class="nav-item"><button class="btn btn-header flying" id="flying">FLYING</button></li>
+                <li class="nav-item"><button class="btn btn-header psychic" id="psychic">PSYCHIC</button></li>
+                <li class="nav-item"><button class="btn btn-header bug" id="bug">BUG</button></li>
+                <li class="nav-item"><button class="btn btn-header rock" id="rock">ROCK</button></li>
+                <li class="nav-item"><button class="btn btn-header ghost" id="ghost">GHOST</button></li>
+                <li class="nav-item"><button class="btn btn-header dark" id="dark">DARK</button></li>
+                <li class="nav-item"><button class="btn btn-header dragon" id="dragon">DRAGON</button></li>
+                <li class="nav-item"><button class="btn btn-header steel" id="steel">STEEL</button></li>
+                <li class="nav-item"><button class="btn btn-header fairy" id="fairy">FAIRY</button></li>
+            </ul>
+
+            <form>
+                <div class="formulario">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="icono">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m15.75 15.75-2.489-2.489m0 0a3.375 3.375 0 1 0-4.773-4.773 3.375 3.375 0 0 0 4.774 4.774ZM21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    <input type="search" placeholder="Busca tu Favorito">
+                </div>
+                <button class="btn-search">BUSCAR</button>
+            </form>
+    
+        </nav>
+
+    </header>
+
+    <main>
+        <div id="pokedex">
+            <div class="pokemon-cards" id="listadoPokemon">
+                <!-- <div class="pokemon"> 
+                    <p class="pokemon-numero">#001</p>
+                    <div class="pokemon-imagen">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt="pikachu">
+                    </div>
+                    <div class="pokemon-datos">
+                        <div class="nombre-contenedor">
+                            <p class="pokemon-parrafo">#001</p>
+                            <h2 class="pokemon-nombre">pikachu</h2>
+                        </div>
+
+                        <div class="pokemon-tabla">
+                            <p class="electric tipo">ELECTRIC</p>
+                            <p class="fighting tipo">FIGHTING</p>
+                        </div>
+                        <div class="pokemon-stats">
+                            <p class="stat">4M</p>
+                            <p class="stat">8KG</p>
+                        </div>
+
+                    </div>
+
+                </div> -->
+
+            </div>
+        </div>
+        
+    </main>
+
+</body>
+
+</html>
